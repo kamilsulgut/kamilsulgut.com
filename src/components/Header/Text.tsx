@@ -1,12 +1,13 @@
 import { Box, Typography, Button } from "@mui/material";
 import React from "react";
+import { myHover, myDefaultText } from "../../constants/colors";
 
 const Text = () => {
   return (
     <>
       <Box
         sx={{
-          color: "white",
+          color: `${myDefaultText}`,
           height: "100%",
         }}
       >
@@ -17,7 +18,22 @@ const Text = () => {
           I'm Front-end Developer.
         </Typography>
         <Typography align="center">
-          <Button variant="outlined">GET TO KNOW ME</Button>
+          <Button
+            variant="outlined"
+            sx={{
+              marginTop: 5,
+              color: `${myDefaultText}`,
+              borderColor: `${myDefaultText}`,
+              "&:hover": {
+                color: `${myHover}`,
+                borderColor: `${myHover}`,
+                cursor: "pointer",
+                fontWeight: "bold",
+              },
+            }}
+          >
+            GET TO KNOW ME
+          </Button>
         </Typography>
       </Box>
     </>

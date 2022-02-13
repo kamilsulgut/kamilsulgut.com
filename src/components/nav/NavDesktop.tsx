@@ -2,6 +2,7 @@ import React from "react";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import { menuItems } from "./routeList";
+import { myHover, myDefaultText } from "../../constants/colors";
 
 const NavDesktop = () => {
   return (
@@ -12,7 +13,18 @@ const NavDesktop = () => {
             key={i}
             variant="h6"
             component="div"
-            sx={{ flexGrow: 1, marginLeft: 5 }}
+            sx={{
+              flexGrow: 1,
+              marginLeft: 5,
+              color: `${myDefaultText}`,
+              fontSize: "0.9rem",
+              transition: "color(0.3)",
+              "&:hover": {
+                color: `${myHover}`,
+                cursor: "pointer",
+                fontWeight: "bold",
+              },
+            }}
           >
             {el.item.toUpperCase()}
           </Typography>

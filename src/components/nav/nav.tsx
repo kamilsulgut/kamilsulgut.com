@@ -7,8 +7,11 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 
 const Nav = () => {
+  const theme = useTheme();
   const menuItems: { item: string; route: string }[] = [
     { item: "Home", route: "/" },
     { item: "AboutMe", route: "/about" },
@@ -27,6 +30,8 @@ const Nav = () => {
     setAnchorEl(null);
   };
 
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  console.log(isMobile);
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
@@ -40,13 +45,6 @@ const Nav = () => {
         position="sticky"
       >
         <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          ></IconButton>
           {menuItems.map((el: { item: string; route: string }, i: number) => {
             return (
               <Typography
@@ -59,44 +57,55 @@ const Nav = () => {
               </Typography>
             );
           })}
-
           <div>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorEl}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorEl)}
-              onClose={handleClose}
-            >
-              {menuItems.map(
-                (el: { item: string; route: string }, i: number) => {
-                  return (
-                    <MenuItem key={i} onClick={handleClose}>
-                      {el.item}
-                    </MenuItem>
-                  );
-                }
-              )}
-              <MenuItem onClick={handleClose}>My account</MenuItem>
-            </Menu>
+            {isMobile ? (
+              <>
+                <IconButton
+                  size="large"
+                  aria-label="account of current user"
+                  aria-controls="menu-appbar"
+                  aria-haspopup="true"
+                  onClick={handleMenu}
+                  color="inherit"
+                >
+                  <MenuIcon />
+                </IconButton>
+                <Menu
+                  id="menu-appbar"
+                  anchorEl={anchorEl}
+                  anchorOrigin={{
+                    vertical: "top",
+                    horizontal: "right",
+                  }}
+                  keepMounted
+                  transformOrigin={{
+                    vertical: "top",
+                    horizontal: "right",
+                  }}
+                  open={Boolean(anchorEl)}
+                  onClose={handleClose}
+                >
+                  {menuItems.map(
+                    (el: { item: string; route: string }, i: number) => {
+                      return (
+                        <MenuItem key={i} onClick={handleClose}>
+                          {el.item}
+                        </MenuItem>
+                      );
+                    }
+                  )}
+                  <MenuItem onClick={handleClose}>My account</MenuItem>
+                </Menu>
+              </>
+            ) : (
+              <IconButton
+                size="large"
+                edge="start"
+                color="inherit"
+                aria-label="menu"
+                sx={{ mr: 2 }}
+              ></IconButton>
+            )}
           </div>
         </Toolbar>
       </AppBar>

@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { css } from "@emotion/react";
-import { Paper } from "@mui/material";
+import { Container, Paper } from "@mui/material";
 import Header from "../components/Header/Header";
 import CssBaseline from "@mui/material/CssBaseline";
 
@@ -21,7 +21,7 @@ const Layout: FC = (props) => {
       sx={{
         display: "flex",
         flexDirection: "column",
-        backgroundColor: "transparent",
+        backgroundColor: "#19274c",
         width: "100%",
         minHeight: "100vh",
         overflow: "hidden",
@@ -30,7 +30,7 @@ const Layout: FC = (props) => {
       <CssBaseline />
 
       <Header />
-      {props.children}
+      <Container maxWidth="xl">{props.children}</Container>
     </Paper>
   );
 };

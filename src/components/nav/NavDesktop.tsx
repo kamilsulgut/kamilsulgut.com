@@ -3,6 +3,7 @@ import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import { menuItems } from "./routeList";
 import { myHover, myDefaultText } from "../../constants/colors";
+import Button from "@mui/material/Button";
 
 const NavDesktop = () => {
   return (
@@ -16,17 +17,21 @@ const NavDesktop = () => {
             sx={{
               flexGrow: 1,
               marginLeft: 5,
-              color: `${myDefaultText}`,
-              fontSize: "0.9rem",
-              transition: "color(0.3)",
-              "&:hover": {
-                color: `${myHover}`,
-                cursor: "pointer",
-                fontWeight: "bold",
-              },
             }}
           >
-            {el.item.toUpperCase()}
+            <Button
+              sx={{
+                color: `${myDefaultText}`,
+                fontSize: "0.9rem",
+                "&:hover": {
+                  color: `${myHover}`,
+                  cursor: "pointer",
+                  fontWeight: "bold",
+                },
+              }}
+            >
+              {el.item.toUpperCase()}
+            </Button>
           </Typography>
         );
       })}

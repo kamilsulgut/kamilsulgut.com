@@ -13,7 +13,7 @@ const Header = () => {
           backroundSize: "cover",
           backgroundPosition: "center",
           backgroundImage: `url(${bgcImg})`,
-          boxShadow: `0 100% rgba(0,0,0,0.4) inset`,
+          boxShadow: `0 100vh rgba(120, 120, 120, 0.09) inset`,
           maxHeight: "100vh",
         }}
       >

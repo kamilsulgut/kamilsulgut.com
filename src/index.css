@@ -3,3 +3,12 @@ body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
 }
+
+.css-1nvnyqx-MuiPaper-root-MuiDrawer-paper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}

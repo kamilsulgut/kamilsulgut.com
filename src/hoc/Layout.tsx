@@ -21,7 +21,7 @@ const Layout: FC = (props) => {
       sx={{
         display: "flex",
         flexDirection: "column",
-
+        backgroundColor: "transparent",
         width: "100%",
         minHeight: "100vh",
         overflow: "hidden",

@@ -1,20 +1,36 @@
 import React from "react";
 import Nav from "../Nav/Nav";
 import Box from "@mui/material/Box";
-import bgcImg from "../../img/desktop-1245714_1920.jpg";
+import bgcImg from "../../img/cool_gemoteric.jpg";
+import { Container } from "@mui/material";
+import Text from "./Text";
 
 const Header = () => {
   return (
     <>
       <Box
         sx={{
+          backroundSize: "cover",
+          backgroundPosition: "center",
           backgroundImage: `url(${bgcImg})`,
-          boxShadow: `0 100vh rgba(0,0,0,0.4) inset`,
-          minWidth: "100vw",
-          minHeight: "100vh",
+          boxShadow: `0 100vh rgba(120, 120, 120, 0.09) inset`,
+          maxHeight: "100vh",
         }}
       >
-        <Nav />
+        <Container maxWidth="xl">
+          <Nav />
+        </Container>
+        <Container
+          sx={{
+            minHeight: "100vh",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Text />
+        </Container>
       </Box>
     </>
   );

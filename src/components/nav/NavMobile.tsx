@@ -4,6 +4,7 @@ import { menuItems } from "./routeList";
 import MenuIcon from "@mui/icons-material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Drawer from "@mui/material/Drawer";
+import { myHover, myDefaultText, hamburgerColor } from "../../constants/colors";
 
 const NavMobile = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -24,7 +25,9 @@ const NavMobile = () => {
         aria-controls="menu-appbar"
         aria-haspopup="true"
         onClick={handleMenu}
-        color="inherit"
+        sx={{
+          color: `${hamburgerColor}`,
+        }}
       >
         <MenuIcon />
       </IconButton>
@@ -34,10 +37,19 @@ const NavMobile = () => {
         keepMounted
         open={Boolean(anchorEl)}
         onClose={handleClose}
+        sx={{
+          backgroundColor: "transparent",
+        }}
       >
         {menuItems.map((el: { item: string; route: string }, i: number) => {
           return (
-            <MenuItem key={i} onClick={handleClose}>
+            <MenuItem
+              sx={{
+                color: `${myDefaultText}`,
+              }}
+              key={i}
+              onClick={handleClose}
+            >
               {el.item.toUpperCase()}
             </MenuItem>
           );

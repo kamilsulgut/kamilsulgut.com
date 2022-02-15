@@ -4,16 +4,16 @@ import meImg from "../../img/aboutMe.jpeg";
 
 const AboutImg = () => {
   return (
+    //<Box component={<img>}> <-- sprawdzić takie działanie.
     <ImageListItem
       sx={{
         marginTop: 3,
         marginBottom: 3,
-        width: 440,
-        height: 650,
+        minWidth: 440,
+        minHght: 650,
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backroundSize: "cover",
-        borderRadius: 15,
       }}
     >
       <img

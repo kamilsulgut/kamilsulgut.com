@@ -2,27 +2,16 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import AboutImg from "./AboutImg";
 import AboutText from "./AboutText";
+import { useStyles } from "../../constants/styles";
 
 const AboutMe = () => {
+  const styles = useStyles();
   return (
     <>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          marginTop: 3,
-          color: "white",
-        }}
-      >
+      <Box className={styles.sectionTittle}>
         <Typography variant="h3">ABOUT ME</Typography>
       </Box>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-        }}
-      >
+      <Box className={styles.aboutSection}>
         <AboutImg />
         <AboutText />
       </Box>

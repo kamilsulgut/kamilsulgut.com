@@ -19,9 +19,9 @@ function AboutText() {
           flexDirection: "row",
         }}
       >
-        {aboutText.map((el) => {
+        {aboutText.map((el: string, i: number) => {
           return (
-            <Typography mt={3} variant="h5">
+            <Typography key={i} mt={3} variant="h5">
               {el}
             </Typography>
           );

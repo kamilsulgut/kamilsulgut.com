@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import { css } from "@emotion/react";
 import { Container, Paper } from "@mui/material";
 import Header from "../components/Header/Header";
 import CssBaseline from "@mui/material/CssBaseline";

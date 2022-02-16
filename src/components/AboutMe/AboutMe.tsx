@@ -3,14 +3,13 @@ import React from "react";
 import AboutImg from "./AboutImg";
 import AboutText from "./AboutText";
 import { useStyles } from "../../constants/styles";
+import Tittle from "../../constants/Tittle";
 
 const AboutMe = () => {
   const styles = useStyles();
   return (
     <>
-      <Box className={styles.sectionTittle}>
-        <Typography variant="h3">ABOUT ME</Typography>
-      </Box>
+      <Tittle text="About Me" />
       <Box className={styles.aboutSection}>
         <AboutImg />
         <AboutText />

@@ -2,6 +2,18 @@ import { makeStyles } from "@mui/styles";
 import { myHover, myDefaultText } from "./colors";
 
 export const useStyles = makeStyles({
+  sectionTittle: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: "5rem",
+    marginBottom: "8rem",
+    color: "white",
+  },
+  aboutSection: {
+    display: "flex",
+    justifyContent: "space-between",
+  },
   appBar: {
     display: "flex",
     flexDirection: "row",
@@ -50,16 +62,5 @@ export const useStyles = makeStyles({
     backgroundRepeat: "no-repeat",
     backroundSize: "cover",
     borderRadius: 3,
-  },
-  sectionTittle: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: 3,
-    color: "white",
-  },
-  aboutSection: {
-    display: "flex",
-    justifyContent: "space-between",
   },
 });

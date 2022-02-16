@@ -47,7 +47,7 @@ export const useStyles = makeStyles({
     transition: "all 300ms ease-in-out",
     "&:hover": {
       color: `${myHover}`,
-      transform: " scale(1.1)",
+      transform: "scale(1.1)",
     },
   },
   img: {
@@ -62,5 +62,8 @@ export const useStyles = makeStyles({
     backgroundRepeat: "no-repeat",
     backroundSize: "cover",
     borderRadius: 3,
+  },
+  contactForm: {
+    marginBottom: 30,
   },
 });

@@ -9,11 +9,13 @@ export const useStyles = makeStyles({
     color: "white",
   },
   navDesktopTypography: {
+    transition: "all 250ms ease-in-out",
     marginLeft: 5,
   },
   navDesktopButton: {
     color: `${myDefaultText}`,
     fontSize: "0.9rem",
+    transition: "all 250ms ease-in-out",
     "&:hover": {
       color: `${myHover}`,
       cursor: "pointer",
@@ -22,16 +24,18 @@ export const useStyles = makeStyles({
   },
   techBox: {
     flexDirection: "row",
-    flexGrow: 1,
+    justifyContent: "center",
+    alignItems: "center",
     color: "white",
   },
   techElement: {
-    margin: 30,
+    marginLeft: "50%",
+    marginTop: 30,
     fontSize: "3rem",
+    transition: "all 250ms ease-in-out",
     "&:hover": {
-      transition: "all 250ms ease-in-out",
       color: `${myHover}`,
-      fontSize: "3.5rem",
+      fontSize: "3.2rem",
     },
   },
   img: {

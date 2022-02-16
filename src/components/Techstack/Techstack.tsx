@@ -15,51 +15,57 @@ import { FaSass } from "react-icons/fa";
 import { IoLogoBitbucket } from "react-icons/io";
 import { Box } from "@mui/system";
 import { useStyles } from "../../constants/styles";
+import { Grid } from "@mui/material";
 
 const Techstack = () => {
   const styles = useStyles();
 
   return (
-    < Box className={styles.techBox}>
-      
-        <Box>
+    <Box className={styles.techBox}>
+      <Grid
+        container
+        className={styles.techBox}
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Grid item lg={4} md={6} sm={12}>
           <SiJavascript className={styles.techElement} />
-        </Box>
-        <Box>
+        </Grid>
+        <Grid item lg={4} md={6} sm={12}>
           <SiReact className={styles.techElement} />
-        </Box>
-        <Box>
+        </Grid>
+        <Grid item lg={4} md={6} sm={12}>
           <SiRedux className={styles.techElement} />
-        </Box>
-        <Box>
+        </Grid>
+        <Grid item lg={4} md={6} sm={12}>
           <SiHtml5 className={styles.techElement} />
-        </Box>
-        <Box>
+        </Grid>
+        <Grid item lg={4} md={6} sm={12}>
           <SiCss3 className={styles.techElement} />
-        </Box>
-        <Box>
+        </Grid>
+        <Grid item lg={4} md={6} sm={12}>
           <FaSass className={styles.techElement} />
-        </Box>
-        <Box>
+        </Grid>
+        <Grid item lg={4} md={6} sm={12}>
           <SiTypescript className={styles.techElement} />
-        </Box>
-        <Box>
+        </Grid>
+        <Grid item lg={4} md={6} sm={12}>
           <IoLogoBitbucket className={styles.techElement} />
-        </Box>
-        <Box>
+        </Grid>
+        <Grid item lg={4} md={6} sm={12}>
           <SiNextdotjs className={styles.techElement} />
-        </Box>
-        <Box>
+        </Grid>
+        <Grid item lg={4} md={6} sm={12}>
           <SiMaterialui className={styles.techElement} />
-        </Box>
-        <Box>
+        </Grid>
+        <Grid item lg={4} md={6} sm={12}>
           <SiBootstrap className={styles.techElement} />
-        </Box>
-        <Box>
+        </Grid>
+        <Grid item lg={4} md={6} sm={12}>
           <SiFirebase className={styles.techElement} />
-        </Box>
-      
-    <Box/>
+        </Grid>
+      </Grid>
+    </Box>
   );
 };
 

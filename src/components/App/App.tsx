@@ -3,6 +3,7 @@ import "./App.css";
 import Layout from "../../hoc/Layout";
 import AboutMe from "../AboutMe/AboutMe";
 import Techstack from "../Techstack/Techstack";
+import Portfolio from "../Portfolio/Portfolio";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Layout>
         <AboutMe />
         <Techstack />
+        <Portfolio />
       </Layout>
     </div>
   );

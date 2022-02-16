@@ -35,7 +35,6 @@ const Techstack = () => {
           title="JavaScript"
           disableFocusListener
           TransitionComponent={Fade}
-          TransitionProps={{ timeout: 600 }}
         >
           <Grid item lg={4} md={6} sm={12}>
             <SiJavascript className={styles.techElement} />

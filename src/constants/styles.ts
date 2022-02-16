@@ -44,10 +44,10 @@ export const useStyles = makeStyles({
     marginLeft: "50%",
     marginTop: 30,
     fontSize: "3rem",
-    transition: "all 250ms ease-in-out",
+    transition: "all 300ms ease-in-out",
     "&:hover": {
       color: `${myHover}`,
-      fontSize: "3.2rem",
+      transform: " scale(1.1)",
     },
   },
   img: {

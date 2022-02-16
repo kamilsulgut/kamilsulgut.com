@@ -2,10 +2,13 @@ import React from "react";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import { menuItems } from "./routeList";
-import { myHover, myDefaultText } from "../../constants/colors";
+
 import Button from "@mui/material/Button";
 
+import { useStyles } from "../../constants/styles";
+
 const NavDesktop = () => {
+  const styles = useStyles();
   return (
     <>
       {menuItems.map((el: { item: string; route: string }, i: number) => {
@@ -14,22 +17,9 @@ const NavDesktop = () => {
             key={i}
             variant="h6"
             component="div"
-            sx={{
-              flexGrow: 1,
-              marginLeft: 5,
-            }}
+            className={styles.navDesktopTypography}
           >
-            <Button
-              sx={{
-                color: `${myDefaultText}`,
-                fontSize: "0.9rem",
-                "&:hover": {
-                  color: `${myHover}`,
-                  cursor: "pointer",
-                  fontWeight: "bold",
-                },
-              }}
-            >
+            <Button className={styles.navDesktopButton}>
               {el.item.toUpperCase()}
             </Button>
           </Typography>

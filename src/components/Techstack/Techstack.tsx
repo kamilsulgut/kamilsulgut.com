@@ -36,7 +36,7 @@ const Techstack = () => {
           disableFocusListener
           TransitionComponent={Fade}
         >
-          <Grid item lg={4} md={6} sm={12}>
+          <Grid item lg={4} md={6} xs={12}>
             <SiJavascript className={styles.techElement} />
           </Grid>
         </Tooltip>
@@ -46,7 +46,7 @@ const Techstack = () => {
           TransitionComponent={Fade}
           TransitionProps={{ timeout: 600 }}
         >
-          <Grid item lg={4} md={6} sm={12}>
+          <Grid item lg={4} md={6} xs={12}>
             <SiReact className={styles.techElement} />
           </Grid>
         </Tooltip>
@@ -56,7 +56,7 @@ const Techstack = () => {
           TransitionComponent={Fade}
           TransitionProps={{ timeout: 600 }}
         >
-          <Grid item lg={4} md={6} sm={12}>
+          <Grid item lg={4} md={6} xs={12}>
             <SiRedux className={styles.techElement} />
           </Grid>
         </Tooltip>
@@ -66,7 +66,7 @@ const Techstack = () => {
           TransitionComponent={Fade}
           TransitionProps={{ timeout: 600 }}
         >
-          <Grid item lg={4} md={6} sm={12}>
+          <Grid item lg={4} md={6} xs={12}>
             <SiHtml5 className={styles.techElement} />
           </Grid>
         </Tooltip>
@@ -76,7 +76,7 @@ const Techstack = () => {
           TransitionComponent={Fade}
           TransitionProps={{ timeout: 600 }}
         >
-          <Grid item lg={4} md={6} sm={12}>
+          <Grid item lg={4} md={6} xs={12}>
             <SiCss3 className={styles.techElement} />
           </Grid>
         </Tooltip>
@@ -86,7 +86,7 @@ const Techstack = () => {
           TransitionComponent={Fade}
           TransitionProps={{ timeout: 600 }}
         >
-          <Grid item lg={4} md={6} sm={12}>
+          <Grid item lg={4} md={6} xs={12}>
             <FaSass className={styles.techElement} />
           </Grid>
         </Tooltip>
@@ -96,7 +96,7 @@ const Techstack = () => {
           TransitionComponent={Fade}
           TransitionProps={{ timeout: 600 }}
         >
-          <Grid item lg={4} md={6} sm={12}>
+          <Grid item lg={4} md={6} xs={12}>
             <SiTypescript className={styles.techElement} />
           </Grid>
         </Tooltip>
@@ -106,7 +106,7 @@ const Techstack = () => {
           TransitionComponent={Fade}
           TransitionProps={{ timeout: 600 }}
         >
-          <Grid item lg={4} md={6} sm={12}>
+          <Grid item lg={4} md={6} xs={12}>
             <IoLogoBitbucket className={styles.techElement} />
           </Grid>
         </Tooltip>
@@ -116,7 +116,7 @@ const Techstack = () => {
           TransitionComponent={Fade}
           TransitionProps={{ timeout: 600 }}
         >
-          <Grid item lg={4} md={6} sm={12}>
+          <Grid item lg={4} md={6} xs={12}>
             <SiNextdotjs className={styles.techElement} />
           </Grid>
         </Tooltip>
@@ -126,7 +126,7 @@ const Techstack = () => {
           TransitionComponent={Fade}
           TransitionProps={{ timeout: 600 }}
         >
-          <Grid item lg={4} md={6} sm={12}>
+          <Grid item lg={4} md={6} xs={12}>
             <SiMaterialui className={styles.techElement} />
           </Grid>
         </Tooltip>
@@ -136,7 +136,7 @@ const Techstack = () => {
           TransitionComponent={Fade}
           TransitionProps={{ timeout: 600 }}
         >
-          <Grid item lg={4} md={6} sm={12}>
+          <Grid item lg={4} md={6} xs={12}>
             <SiBootstrap className={styles.techElement} />
           </Grid>
         </Tooltip>
@@ -146,7 +146,7 @@ const Techstack = () => {
           TransitionComponent={Fade}
           TransitionProps={{ timeout: 600 }}
         >
-          <Grid item lg={4} md={6} sm={12}>
+          <Grid item lg={4} md={6} xs={12}>
             <SiFirebase className={styles.techElement} />
           </Grid>
         </Tooltip>

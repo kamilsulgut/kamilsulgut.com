@@ -3,7 +3,7 @@ import React from "react";
 import AboutImg from "./AboutImg";
 import AboutText from "./AboutText";
 import { useStyles } from "../../constants/styles";
-import Tittle from "../../constants/Tittle";
+import Tittle from "../../constants/Title";
 
 const AboutMe = () => {
   const styles = useStyles();

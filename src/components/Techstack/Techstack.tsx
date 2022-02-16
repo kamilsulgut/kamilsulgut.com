@@ -16,7 +16,7 @@ import { IoLogoBitbucket } from "react-icons/io";
 import { Box } from "@mui/system";
 import { useStyles } from "../../constants/styles";
 import { Grid, Tooltip } from "@mui/material";
-import Tittle from "../../constants/Tittle";
+import Tittle from "../../constants/Title";
 import Fade from "@mui/material/Fade";
 
 const Techstack = () => {

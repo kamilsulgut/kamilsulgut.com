@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import { useStyles } from "./styles";
 
-const Tittle = (props: { text: string }) => {
+const Title = (props: { text: string }) => {
   const styles = useStyles();
 
   return (
@@ -12,4 +12,4 @@ const Tittle = (props: { text: string }) => {
   );
 };
 
-export default Tittle;
+export default Title;

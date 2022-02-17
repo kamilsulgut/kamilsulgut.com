@@ -70,4 +70,14 @@ export const useStyles = makeStyles({
     marginBottom: 20,
     backgroundColor: "white",
   },
+  dialogSuccessTitle: {
+    fontSize: "3rem",
+  },
+  dialogSuccessContent: {
+    fontSize: "2rem",
+  },
+  dialogSuccessActions: {
+    fontSize: "2rem",
+    color: "#00ba00",
+  },
 });

@@ -1,8 +1,8 @@
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { useForm, Controller, SubmitHandler } from "react-hook-form";
 import { useStyles } from "../../constants/styles";
-import { Button, TextField } from "@mui/material";
+import { Button, Grid, TextField } from "@mui/material";
 
 interface IFormInput {
   fullName: string;
@@ -12,7 +12,13 @@ interface IFormInput {
 }
 
 const ContactForm: FC = () => {
-  const { control, register, handleSubmit } = useForm<IFormInput>({
+  const {
+    control,
+    register,
+    handleSubmit,
+    reset,
+    formState: { isSubmitSuccessful },
+  } = useForm<IFormInput>({
     defaultValues: {
       fullName: "",
       company: "",
@@ -45,72 +51,105 @@ const ContactForm: FC = () => {
         }
       );
   };
+  useEffect(() => {
+    if (isSubmitSuccessful) {
+      reset({
+        fullName: "",
+        company: "",
+        email: "",
+        message: "",
+      });
+    }
+  }, [isSubmitSuccessful, reset]);
 
   const styles = useStyles();
 
   return (
     <form className={styles.contactForm} onSubmit={handleSubmit(onSubmit)}>
-      <Controller
-        name="fullName"
-        control={control}
-        render={({ field }) => (
-          <TextField
-            {...register("fullName", {
-              required: true,
-              maxLength: 20,
-              pattern: /^[A-Za-z]+$/i,
-            })}
-            {...field}
-            label="Full Name"
-            variant="outlined"
-            name="fullName"
-            fullWidth
-          ></TextField>
-        )}
-      />
-      <Controller
-        name="company"
-        control={control}
-        render={({ field }) => (
-          <TextField
-            {...field}
-            label="Company"
-            variant="outlined"
-            name="company"
-            required
-            fullWidth
-          ></TextField>
-        )}
-      />
-      <Controller
-        name="email"
-        control={control}
-        render={({ field }) => (
-          <TextField
-            {...field}
-            label="Email"
-            variant="outlined"
-            name="email"
-            required
-            fullWidth
-          ></TextField>
-        )}
-      />
-      <Controller
-        name="message"
-        control={control}
-        render={({ field }) => (
-          <TextField
-            {...field}
-            label="Message"
-            variant="outlined"
-            name="message"
-            required
-            fullWidth
-          ></TextField>
-        )}
-      />
-      <Button type="submit">Send</Button>
+      <Grid container justifyContent="center" alignItems="center">
+        <Grid item container direction="column" xs={12} md={6} spacing={2}>
+          <Grid item>
+            <Controller
+              name="fullName"
+              control={control}
+              render={({ field }) => (
+                <TextField
+                  {...register("fullName", {
+                    required: true,
+                    maxLength: 20,
+                    pattern: /^[A-Za-z]+$/i,
+                  })}
+                  {...field}
+                  className={styles.contactInput}
+                  label="Full Name"
+                  variant="outlined"
+                  name="fullName"
+                  required
+                  color="primary"
+                  fullWidth
+                ></TextField>
+              )}
+            />
+          </Grid>
+          <Grid item>
+            <Controller
+              name="company"
+              control={control}
+              render={({ field }) => (
+                <TextField
+                  {...field}
+                  className={styles.contactInput}
+                  label="Company"
+                  variant="outlined"
+                  name="company"
+                  required
+                  color="primary"
+                  fullWidth
+                ></TextField>
+              )}
+            />
+          </Grid>
+          <Grid item>
+            <Controller
+              name="email"
+              control={control}
+              render={({ field }) => (
+                <TextField
+                  {...field}
+                  type="email"
+                  {...register("email")}
+                  className={styles.contactInput}
+                  label="Email"
+                  variant="outlined"
+                  name="email"
+                  required
+                  color="primary"
+                  fullWidth
+                ></TextField>
+              )}
+            />
+          </Grid>
+          <Grid item>
+            <Controller
+              name="message"
+              control={control}
+              render={({ field }) => (
+                <TextField
+                  {...field}
+                  className={styles.contactInput}
+                  label="Message"
+                  variant="outlined"
+                  name="message"
+                  required
+                  color="primary"
+                  fullWidth
+                ></TextField>
+              )}
+            />
+          </Grid>
+          <Button type="submit">Send</Button>
+        </Grid>
+      </Grid>
     </form>
   );
 };

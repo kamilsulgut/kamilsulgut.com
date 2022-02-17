@@ -66,4 +66,8 @@ export const useStyles = makeStyles({
   contactForm: {
     marginBottom: 30,
   },
+  contactInput: {
+    marginBottom: 20,
+    backgroundColor: "white",
+  },
 });

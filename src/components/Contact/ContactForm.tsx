@@ -1,8 +1,9 @@
-import React, { FC, useEffect } from "react";
+import React, { FC, useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useForm, Controller, SubmitHandler } from "react-hook-form";
 import { useStyles } from "../../constants/styles";
 import { Button, Grid, TextField } from "@mui/material";
+import Success from "./Success";
 
 interface IFormInput {
   fullName: string;
@@ -12,6 +13,8 @@ interface IFormInput {
 }
 
 const ContactForm: FC = () => {
+  const [openSucces, setOpenSucces] = useState(false);
+
   const {
     control,
     register,
@@ -44,6 +47,7 @@ const ContactForm: FC = () => {
       .send(`${serviceId}`, `${templateId}`, templateParams, `${userID}`)
       .then(
         function (response) {
+          setOpenSucces(true);
           console.log("SUCCESS!", response.status, response.text);
         },
         function (error) {
@@ -150,6 +154,7 @@ const ContactForm: FC = () => {
           <Button type="submit">Send</Button>
         </Grid>
       </Grid>
+      <Success show={openSucces} />
     </form>
   );
 };

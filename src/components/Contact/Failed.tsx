@@ -8,7 +8,7 @@ import {
   Dialog,
 } from "@mui/material";
 
-const Success: FC = () => {
+const Failed: FC = () => {
   const [open, setOpen] = useState(true);
 
   const handleClose = () => {
@@ -18,13 +18,15 @@ const Success: FC = () => {
     <Dialog
       open={open}
       onClose={handleClose}
-      aria-labelledby="success-dialog-title"
+      aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
     >
-      <DialogTitle id="success-dialog-title">{"Sucessfull send!"}</DialogTitle>
+      <DialogTitle id="alert-dialog-title">
+        {"Use Google's location service?"}
+      </DialogTitle>
       <DialogContent>
         <DialogContentText id="alert-dialog-description">
-          Thank's for visit.
+          Sorry something goes wrong.
         </DialogContentText>
       </DialogContent>
       <DialogActions>
@@ -34,4 +36,4 @@ const Success: FC = () => {
   );
 };
 
-export default Success;
+export default Failed;

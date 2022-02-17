@@ -4,6 +4,7 @@ import { useForm, Controller, SubmitHandler } from "react-hook-form";
 import { useStyles } from "../../constants/styles";
 import { Button, Grid, TextField } from "@mui/material";
 import Success from "./Success";
+import Failed from "./Failed";
 
 interface IFormInput {
   fullName: string;
@@ -14,6 +15,7 @@ interface IFormInput {
 
 const ContactForm: FC = () => {
   const [openSucces, setOpenSucces] = useState(false);
+  const [openFail, setOpenFail] = useState(false);
 
   const {
     control,
@@ -47,13 +49,17 @@ const ContactForm: FC = () => {
       .send(`${serviceId}`, `${templateId}`, templateParams, `${userID}`)
       .then(
         function (response) {
-          setOpenSucces(true);
-          console.log("SUCCESS!", response.status, response.text);
+          response.status ? setOpenSucces(true) : setOpenFail(true);
         },
         function (error) {
+          setOpenFail(true);
           console.log("FAILED...", error);
         }
-      );
+      )
+      .catch((err) => {
+        setOpenFail(true);
+        console.log(err);
+      });
   };
   useEffect(() => {
     if (isSubmitSuccessful) {
@@ -154,7 +160,8 @@ const ContactForm: FC = () => {
           <Button type="submit">Send</Button>
         </Grid>
       </Grid>
-      <Success show={openSucces} />
+      {openSucces ? <Success /> : null}
+      {openFail ? <Failed /> : null}
     </form>
   );
 };

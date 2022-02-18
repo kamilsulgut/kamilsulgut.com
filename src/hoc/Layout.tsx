@@ -34,6 +34,7 @@ const Layout: FC = (props) => {
           display: "flex",
           flexDirection: "column",
           backgroundImage: `url(${bgcImg})`,
+          backgroundSize: "cover",
           width: "100%",
           minHeight: "100vh",
           overflow: "hidden",

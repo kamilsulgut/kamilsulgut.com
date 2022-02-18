@@ -6,8 +6,8 @@ export const useStyles = makeStyles({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: "5rem",
-    marginBottom: "8rem",
+    marginTop: "3rem",
+    marginBottom: "5rem",
     color: "white",
   },
   aboutSection: {
@@ -23,7 +23,7 @@ export const useStyles = makeStyles({
   },
   navDesktopTypography: {
     transition: "all 250ms ease-in-out",
-    marginLeft: 5,
+    marginLeft: 10,
   },
   navDesktopButton: {
     color: `${myDefaultText}`,

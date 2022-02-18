@@ -3,6 +3,8 @@ import { Container, Paper } from "@mui/material";
 import Header from "../components/Header/Header";
 import CssBaseline from "@mui/material/CssBaseline";
 import bgcImg from "../img/space.jpg";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+
 const Layout: FC = (props) => {
   //   const styles = {
   //     root: css`
@@ -13,25 +15,36 @@ const Layout: FC = (props) => {
   //       overflow: hidden;
   //     `,
   //   };
-  return (
-    <Paper
-      square
-      elevation={0}
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        // backgroundColor: "#19274c",
-        backgroundImage: `url(${bgcImg})`,
-        width: "100%",
-        minHeight: "100vh",
-        overflow: "hidden",
-      }}
-    >
-      <CssBaseline />
 
-      <Header />
-      <Container maxWidth="xl">{props.children}</Container>
-    </Paper>
+  const theme = createTheme({
+    typography: {
+      fontFamily: ["Montserrat", "sans-serif"].join(","),
+      fontSize: 16,
+      fontWeightRegular: 400,
+      fontWeightMedium: 600,
+    },
+  });
+
+  return (
+    <ThemeProvider theme={theme}>
+      <Paper
+        square
+        elevation={0}
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          backgroundImage: `url(${bgcImg})`,
+          width: "100%",
+          minHeight: "100vh",
+          overflow: "hidden",
+        }}
+      >
+        <CssBaseline />
+
+        <Header />
+        <Container maxWidth="xl">{props.children}</Container>
+      </Paper>
+    </ThemeProvider>
   );
 };
 

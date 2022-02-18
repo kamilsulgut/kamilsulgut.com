@@ -23,7 +23,7 @@ const Techstack = () => {
   const styles = useStyles();
 
   return (
-    <Box className={styles.techBox}>
+    <Box id="techstack" className={styles.techBox}>
       <Tittle text="techstack" />
       <Grid
         container

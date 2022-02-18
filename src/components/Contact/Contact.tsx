@@ -5,7 +5,7 @@ import ContactForm from "./ContactForm";
 
 const Contact: FC = () => {
   return (
-    <Box>
+    <Box id="contact">
       <Title text="Contact" />
       <ContactForm />
     </Box>

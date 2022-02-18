@@ -9,6 +9,7 @@ const Header = () => {
   return (
     <>
       <Box
+        id="header"
         sx={{
           // backroundSize: "cover",
           // backgroundPosition: "center",

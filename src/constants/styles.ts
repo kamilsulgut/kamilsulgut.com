@@ -19,6 +19,7 @@ export const useStyles = makeStyles({
     flexDirection: "row",
     justifyContent: "flex-end",
     color: "white",
+    position: "sticky",
   },
   navDesktopTypography: {
     transition: "all 250ms ease-in-out",
@@ -27,6 +28,7 @@ export const useStyles = makeStyles({
   navDesktopButton: {
     color: `${myDefaultText}`,
     fontSize: "0.9rem",
+    textDecoration: "none",
     transition: "all 250ms ease-in-out",
     "&:hover": {
       color: `${myHover}`,

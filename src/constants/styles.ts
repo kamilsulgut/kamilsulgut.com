@@ -19,6 +19,7 @@ export const useStyles = makeStyles({
     flexDirection: "row",
     justifyContent: "flex-end",
     color: "white",
+    position: "sticky",
   },
   navDesktopTypography: {
     transition: "all 250ms ease-in-out",
@@ -27,6 +28,7 @@ export const useStyles = makeStyles({
   navDesktopButton: {
     color: `${myDefaultText}`,
     fontSize: "0.9rem",
+    textDecoration: "none",
     transition: "all 250ms ease-in-out",
     "&:hover": {
       color: `${myHover}`,
@@ -47,7 +49,7 @@ export const useStyles = makeStyles({
     transition: "all 300ms ease-in-out",
     "&:hover": {
       color: `${myHover}`,
-      transform: " scale(1.1)",
+      transform: "scale(1.1)",
     },
   },
   img: {
@@ -62,5 +64,22 @@ export const useStyles = makeStyles({
     backgroundRepeat: "no-repeat",
     backroundSize: "cover",
     borderRadius: 3,
+  },
+  contactForm: {
+    marginBottom: 30,
+  },
+  contactInput: {
+    marginBottom: 20,
+    backgroundColor: "white",
+  },
+  dialogSuccessTitle: {
+    fontSize: "3rem",
+  },
+  dialogSuccessContent: {
+    fontSize: "2rem",
+  },
+  dialogSuccessActions: {
+    fontSize: "2rem",
+    color: "#00ba00",
   },
 });

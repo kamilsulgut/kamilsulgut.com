@@ -5,8 +5,11 @@ import MenuIcon from "@mui/icons-material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Drawer from "@mui/material/Drawer";
 import { myHover, myDefaultText, hamburgerColor } from "../../constants/colors";
+import { useStyles } from "../../constants/styles";
 
 const NavMobile = () => {
+  const styles = useStyles();
+
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
   const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -50,7 +53,9 @@ const NavMobile = () => {
               key={i}
               onClick={handleClose}
             >
-              {el.item.toUpperCase()}
+              <a href={el.route} className={styles.navDesktopButton}>
+                {el.item.toUpperCase()}
+              </a>
             </MenuItem>
           );
         })}

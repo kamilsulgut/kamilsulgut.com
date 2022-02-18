@@ -19,9 +19,9 @@ const NavDesktop = () => {
             component="div"
             className={styles.navDesktopTypography}
           >
-            <Button className={styles.navDesktopButton}>
+            <a href={el.route} className={styles.navDesktopButton}>
               {el.item.toUpperCase()}
-            </Button>
+            </a>
           </Typography>
         );
       })}

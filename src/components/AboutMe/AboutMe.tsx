@@ -10,7 +10,7 @@ const AboutMe = () => {
   return (
     <>
       <Tittle text="About Me" />
-      <Box className={styles.aboutSection}>
+      <Box id="about" className={styles.aboutSection}>
         <AboutImg />
         <AboutText />
       </Box>

@@ -36,7 +36,7 @@ const Portfolio: FC = () => {
   return (
     <>
       <Title text="Portfolio" />
-      <Box>
+      <Box id="portfolio">
         <Carousel>
           {items.map((item: any, i: number) => (
             <Item key={i} item={item} />

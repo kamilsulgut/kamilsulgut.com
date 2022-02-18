@@ -82,4 +82,13 @@ export const useStyles = makeStyles({
     fontSize: "2rem",
     color: "#00ba00",
   },
+  footerBox: {
+    color: "white",
+    fontSize: "1.3rem",
+  },
+  footerLinks: {
+    color: "white",
+    fontSize: "1.3rem",
+    marginLeft: 20,
+  },
 });

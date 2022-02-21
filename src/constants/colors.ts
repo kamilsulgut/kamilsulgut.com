@@ -1,3 +1,3 @@
-export const myHover: string = "#56e8ff";
-export const myDefaultText: string = "#c7c7c7";
-export const hamburgerColor: string = "#ff47f0";
+export const myHover: string = "#00b4d8";
+export const myDefaultText: string = "#f8f9fa";
+export const hamburgerColor: string = "#48cae4";

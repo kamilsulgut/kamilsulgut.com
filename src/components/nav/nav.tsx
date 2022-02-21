@@ -13,8 +13,8 @@ const Nav: FC = () => {
   const styles = useStyles();
 
   return (
-    <Container maxWidth="xl" className={styles.navBarContainer}>
-      <AppBar position="sticky" elevation={0} color="transparent">
+    <AppBar elevation={0} position="fixed" color="transparent">
+      <Container maxWidth="xl">
         <Toolbar className={styles.appBar}>
           <Hidden mdDown>
             <NavDesktop />
@@ -24,8 +24,8 @@ const Nav: FC = () => {
             <NavMobile />
           </Hidden>
         </Toolbar>
-      </AppBar>
-    </Container>
+      </Container>
+    </AppBar>
   );
 };
 

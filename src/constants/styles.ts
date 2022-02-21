@@ -9,9 +9,11 @@ export const useStyles = makeStyles({
     backgroundImage: `url(${bgcImg})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
+    boxShadow: "100vw 100vh #18181878 inset !important",
     width: "100%",
     minHeight: "100vh",
     overflow: "hidden",
+    color: `${myDefaultText}`,
   },
   sectionTittle: {
     display: "flex",
@@ -32,22 +34,21 @@ export const useStyles = makeStyles({
     alignItems: "center",
     justifyContent: "center",
   },
-  navBarContainer: {
-    position: "sticky",
-    top: 0,
-    right: 0,
-  },
+
   appBar: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "flex-end",
-    color: "white",
-    position: "sticky",
-    marginLeft: 10,
+    color: `${myDefaultText}`,
   },
   navDesktopTypography: {
+    marginLeft: 15,
     transition: "all 250ms ease-in-out",
-    marginLeft: 10,
+    "&:hover": {
+      marginLeft: 20,
+      marginRight: 20,
+      transform: "scale(1.1)",
+    },
   },
   navDesktopButton: {
     color: `${myDefaultText}`,
@@ -58,7 +59,7 @@ export const useStyles = makeStyles({
     "&:hover": {
       color: `${myHover}`,
       cursor: "pointer",
-      transform: "scale(1.1)",
+      transform: "scale(1.3)",
     },
   },
   abutMeText: {
@@ -81,24 +82,22 @@ export const useStyles = makeStyles({
     },
   },
   img: {
-    borderRadrius: 5,
-  },
-  imgItem: {
+    borderRadrius: "25%",
     marginTop: 3,
     marginBottom: 3,
-    minWidth: 440,
-    minHght: 650,
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    backroundSize: "cover",
-    borderRadius: 3,
+    maxWidth: 465,
+    maxHeight: 650,
   },
+
   contactForm: {
     marginBottom: 30,
   },
   contactInput: {
     marginBottom: 20,
     backgroundColor: "white",
+  },
+  contactSubmit: {
+    color: "blue",
   },
   dialogSuccessTitle: {
     fontSize: "3rem",

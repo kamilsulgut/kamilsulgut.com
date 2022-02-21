@@ -166,7 +166,9 @@ const ContactForm: FC = () => {
               )}
             />
           </Grid>
-          <Button type="submit">Send</Button>
+          <Button type="submit" className={styles.contactSubmit}>
+            Send
+          </Button>
         </Grid>
       </Grid>
       {openSucces ? <Success /> : null}

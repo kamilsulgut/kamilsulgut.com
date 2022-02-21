@@ -24,7 +24,7 @@ const AboutText: FC = () => {
       >
         {aboutText.map((el: string, i: number) => {
           return (
-            <Typography key={i} m={3}>
+            <Typography key={i} m={2}>
               <span className={styles.abutMeText}>{el}</span>
             </Typography>
           );

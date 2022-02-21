@@ -11,15 +11,17 @@ import Nav from "../Nav/Nav";
 
 const App: FC = () => {
   return (
-    <Layout>
+    <>
       <Nav />
-      <Header />
-      <AboutMe />
-      <Techstack />
-      <Portfolio />
-      <Contact />
-      <Footer />
-    </Layout>
+      <Layout>
+        <Header />
+        <AboutMe />
+        <Techstack />
+        <Portfolio />
+        <Contact />
+        <Footer />
+      </Layout>
+    </>
   );
 };
 

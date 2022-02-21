@@ -1,18 +1,41 @@
+import { ThemeProvider } from "@mui/material/styles";
+import bgcImg from "../img/space.jpg";
 import { makeStyles } from "@mui/styles";
 import { myHover, myDefaultText } from "./colors";
 
 export const useStyles = makeStyles({
+  Layout: {
+    display: "flex",
+    flexDirection: "column",
+    backgroundImage: `url(${bgcImg})`,
+    backgroundSize: "cover",
+    width: "100%",
+    minHeight: "100vh",
+    overflow: "hidden",
+  },
   sectionTittle: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: "5rem",
-    marginBottom: "8rem",
+    marginTop: "3rem",
+    marginBottom: "5rem",
     color: "white",
   },
   aboutSection: {
     display: "flex",
     justifyContent: "space-between",
+  },
+  headerContainer: {
+    minHeight: "100vh",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  navBarContainer: {
+    position: "sticky",
+    top: 0,
+    right: 0,
   },
   appBar: {
     display: "flex",
@@ -20,15 +43,17 @@ export const useStyles = makeStyles({
     justifyContent: "flex-end",
     color: "white",
     position: "sticky",
+    marginLeft: 10,
   },
   navDesktopTypography: {
     transition: "all 250ms ease-in-out",
-    marginLeft: 5,
+    marginLeft: 10,
   },
   navDesktopButton: {
     color: `${myDefaultText}`,
     fontSize: "0.9rem",
     textDecoration: "none",
+    marginLeft: 8,
     transition: "all 250ms ease-in-out",
     "&:hover": {
       color: `${myHover}`,
@@ -81,5 +106,25 @@ export const useStyles = makeStyles({
   dialogSuccessActions: {
     fontSize: "2rem",
     color: "#00ba00",
+  },
+  footerBox: {
+    color: "white",
+    fontSize: "1.3rem",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  footerBoxItems: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    color: "white",
+    fontSize: "1.3rem",
+  },
+  footerLinks: {
+    color: "white",
+    fontSize: "1.3rem",
+    marginLeft: 20,
   },
 });

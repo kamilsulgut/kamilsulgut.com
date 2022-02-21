@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { Box, Typography } from "@mui/material";
-import { BsLinkedin, BsInstagram } from "react-icons/bs";
+import { BsLinkedin, BsInstagram, BsBoxArrowDown } from "react-icons/bs";
 import { AiFillFacebook } from "react-icons/ai";
 import { useStyles } from "../../constants/styles";
 
@@ -8,8 +8,11 @@ const Footer: FC = () => {
   const styles = useStyles();
   return (
     <Box className={styles.footerBox}>
-      <Typography variant="h4">Footer</Typography>
-      <Box className={styles.footerBox}>
+      <Box className={styles.footerBoxItems}>
+        <p>Kamil Sułgut</p>
+        <span dangerouslySetInnerHTML={{ __html: "&copy;" }}></span>
+      </Box>
+      <Box className={styles.footerBoxItems}>
         <a
           href="https://www.linkedin.com/in/kamilsulgut/"
           target="_blank"

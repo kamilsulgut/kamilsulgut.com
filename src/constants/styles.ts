@@ -110,6 +110,17 @@ export const useStyles = makeStyles({
   footerBox: {
     color: "white",
     fontSize: "1.3rem",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  footerBoxItems: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    color: "white",
+    fontSize: "1.3rem",
   },
   footerLinks: {
     color: "white",

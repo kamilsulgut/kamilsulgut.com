@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import {
   SiJavascript,
   SiReact,
@@ -19,7 +19,7 @@ import { Grid, Tooltip } from "@mui/material";
 import Tittle from "../../constants/Title";
 import Fade from "@mui/material/Fade";
 
-const Techstack = () => {
+const Techstack: FC = () => {
   const styles = useStyles();
 
   return (

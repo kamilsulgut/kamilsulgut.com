@@ -5,13 +5,21 @@ import { useStyles } from "../../constants/styles";
 import { Button, Grid, TextField } from "@mui/material";
 import Success from "./Success";
 import Failed from "./Failed";
-import { ClassNames } from "@emotion/react";
 
 interface IFormInput {
   fullName: string;
   company: string;
   email: string;
   message: string;
+}
+
+interface Template {
+  from_name: string;
+  to_name: string;
+  fullName: string;
+  company: string;
+  email: string;
+  msg: string;
 }
 
 const ContactForm: FC = () => {

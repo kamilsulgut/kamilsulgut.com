@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import "./App.css";
 import Layout from "../../hoc/Layout";
 import AboutMe from "../AboutMe/AboutMe";
@@ -9,7 +9,7 @@ import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import Nav from "../Nav/Nav";
 
-function App() {
+const App: FC = () => {
   return (
     <Layout>
       <Nav />
@@ -21,6 +21,6 @@ function App() {
       <Footer />
     </Layout>
   );
-}
+};
 
 export default App;

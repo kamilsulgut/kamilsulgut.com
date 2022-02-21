@@ -1,8 +1,8 @@
 import { Box, Typography, Button } from "@mui/material";
-import React from "react";
+import React, { FC } from "react";
 import { myHover, myDefaultText } from "../../constants/colors";
 
-const Text = () => {
+const Text: FC = () => {
   return (
     <>
       <Box
@@ -18,7 +18,7 @@ const Text = () => {
           I'm Front-end Developer.
         </Typography>
         <Typography align="center">
-          <Button
+          {/* <Button
             variant="outlined"
             sx={{
               marginTop: 5,
@@ -33,7 +33,7 @@ const Text = () => {
             }}
           >
             GET TO KNOW ME
-          </Button>
+          </Button> */}
         </Typography>
       </Box>
     </>

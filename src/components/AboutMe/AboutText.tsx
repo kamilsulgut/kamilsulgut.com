@@ -1,7 +1,10 @@
 import { Box, Typography } from "@mui/material";
-import React from "react";
+import React, { FC } from "react";
+import { useStyles } from "../../constants/styles";
 
-function AboutText() {
+const AboutText: FC = () => {
+  const styles = useStyles();
+
   const aboutText: string[] = [
     "I am a Polish front-end developer living and working in Warsaw, Poland.",
     "Ever since I was a teenager, I was interested in computer science, especially programming. Finally, in 2019 I decided to start my new career path and become a front-end developer.",
@@ -21,14 +24,14 @@ function AboutText() {
       >
         {aboutText.map((el: string, i: number) => {
           return (
-            <Typography key={i} mt={3} variant="h5">
-              {el}
+            <Typography key={i} m={3}>
+              <span className={styles.abutMeText}>{el}</span>
             </Typography>
           );
         })}
       </Box>
     </>
   );
-}
+};
 
 export default AboutText;

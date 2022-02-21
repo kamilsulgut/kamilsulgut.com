@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import IconButton from "@mui/material/IconButton";
 import { menuItems } from "./routeList";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -7,7 +7,7 @@ import Drawer from "@mui/material/Drawer";
 import { myHover, myDefaultText, hamburgerColor } from "../../constants/colors";
 import { useStyles } from "../../constants/styles";
 
-const NavMobile = () => {
+const NavMobile: FC = () => {
   const styles = useStyles();
 
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);

@@ -1,9 +1,9 @@
-import React from "react";
+import React, { FC } from "react";
 import { ImageListItem } from "@mui/material";
 import meImg from "../../img/aboutMe.jpeg";
 import { useStyles } from "../../constants/styles";
 
-const AboutImg = () => {
+const AboutImg: FC = () => {
   const styles = useStyles();
   return (
     //<Box component={<img>}> <-- sprawdzić takie działanie.

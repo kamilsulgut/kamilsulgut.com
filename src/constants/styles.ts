@@ -1,4 +1,3 @@
-import { ThemeProvider } from "@mui/material/styles";
 import bgcImg from "../img/space.jpg";
 import { makeStyles } from "@mui/styles";
 import { myHover, myDefaultText } from "./colors";
@@ -9,6 +8,7 @@ export const useStyles = makeStyles({
     flexDirection: "column",
     backgroundImage: `url(${bgcImg})`,
     backgroundSize: "cover",
+    backgroundPosition: "center",
     width: "100%",
     minHeight: "100vh",
     overflow: "hidden",
@@ -58,8 +58,11 @@ export const useStyles = makeStyles({
     "&:hover": {
       color: `${myHover}`,
       cursor: "pointer",
-      fontWeight: "bold",
+      transform: "scale(1.1)",
     },
+  },
+  abutMeText: {
+    fontSize: "1.5rem",
   },
   techBox: {
     flexDirection: "row",
@@ -126,5 +129,11 @@ export const useStyles = makeStyles({
     color: "white",
     fontSize: "1.3rem",
     marginLeft: 20,
+    transition: "all 250ms ease-in-out",
+    "&:hover": {
+      color: `${myHover}`,
+      cursor: "pointer",
+      transform: "scale(1.1)",
+    },
   },
 });

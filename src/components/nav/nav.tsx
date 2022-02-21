@@ -8,24 +8,27 @@ import Toolbar from "@mui/material/Toolbar";
 import Hidden from "@mui/material/Hidden";
 import { useStyles } from "../../constants/styles";
 import { Container } from "@mui/material";
+import HideOnScroll from "./HideOnScroll";
 
 const Nav: FC = () => {
   const styles = useStyles();
 
   return (
-    <AppBar elevation={0} position="fixed" color="transparent">
-      <Container maxWidth="xl">
-        <Toolbar className={styles.appBar}>
-          <Hidden mdDown>
-            <NavDesktop />
-          </Hidden>
+    <HideOnScroll>
+      <AppBar elevation={0} position="fixed" color="secondary">
+        <Container maxWidth="xl">
+          <Toolbar className={styles.appBar}>
+            <Hidden mdDown>
+              <NavDesktop />
+            </Hidden>
 
-          <Hidden mdUp>
-            <NavMobile />
-          </Hidden>
-        </Toolbar>
-      </Container>
-    </AppBar>
+            <Hidden mdUp>
+              <NavMobile />
+            </Hidden>
+          </Toolbar>
+        </Container>
+      </AppBar>
+    </HideOnScroll>
   );
 };
 

@@ -12,8 +12,8 @@ import Nav from "../Nav/Nav";
 const App: FC = () => {
   return (
     <>
-      <Nav />
       <Layout>
+        <Nav />
         <Header />
         <AboutMe />
         <Techstack />

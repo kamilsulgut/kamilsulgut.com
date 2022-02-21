@@ -104,7 +104,7 @@ const ContactForm: FC = () => {
                   variant="outlined"
                   name="fullName"
                   required
-                  color="primary"
+                  color="secondary"
                   fullWidth
                 ></TextField>
               )}
@@ -122,7 +122,7 @@ const ContactForm: FC = () => {
                   variant="outlined"
                   name="company"
                   required
-                  color="primary"
+                  color="secondary"
                   fullWidth
                 ></TextField>
               )}
@@ -142,7 +142,7 @@ const ContactForm: FC = () => {
                   variant="outlined"
                   name="email"
                   required
-                  color="primary"
+                  color="secondary"
                   fullWidth
                 ></TextField>
               )}
@@ -160,7 +160,7 @@ const ContactForm: FC = () => {
                   variant="outlined"
                   name="message"
                   required
-                  color="primary"
+                  color="secondary"
                   fullWidth
                 ></TextField>
               )}

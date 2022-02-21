@@ -3,7 +3,7 @@ import { Container, Paper } from "@mui/material";
 import { useStyles } from "../constants/styles";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { StylesProvider } from "@mui/styles";
-import { myHover } from "../constants/colors";
+import { myHover, mySecondary } from "../constants/colors";
 
 const Layout: FC = React.memo((props) => {
   const styles = useStyles();
@@ -17,6 +17,9 @@ const Layout: FC = React.memo((props) => {
     palette: {
       primary: {
         main: `${myHover}`,
+      },
+      secondary: {
+        main: `${mySecondary}`,
       },
     },
   });

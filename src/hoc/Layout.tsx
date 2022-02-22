@@ -22,6 +22,16 @@ const Layout: FC = React.memo((props) => {
         main: `${mySecondary}`,
       },
     },
+    components: {
+      MuiButton: {
+        styleOverrides: {
+          root: {
+            margin: 10,
+            transition: "all 250ms ease-in-out",
+          },
+        },
+      },
+    },
   });
 
   return (

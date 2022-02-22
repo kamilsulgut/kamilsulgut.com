@@ -95,6 +95,7 @@ export const useStyles = makeStyles({
   contactInput: {
     marginBottom: 20,
     backgroundColor: "white",
+    borderRadius: 10,
   },
   contactSubmit: {
     color: "blue",

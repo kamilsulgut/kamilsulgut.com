@@ -2,7 +2,7 @@ import React, { FC, useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useForm, Controller, SubmitHandler } from "react-hook-form";
 import { useStyles } from "../../constants/styles";
-import { Button, Grid, TextField } from "@mui/material";
+import { Box, Button, Grid, TextField } from "@mui/material";
 import Success from "./Success";
 import Failed from "./Failed";
 
@@ -166,9 +166,13 @@ const ContactForm: FC = () => {
               )}
             />
           </Grid>
-          <Button type="submit" className={styles.contactSubmit}>
-            Send
-          </Button>
+          <Grid item justifyContent="center" alignItems="center">
+            <Box display="flex" justifyContent="center" alignItems="center">
+              <Button type="submit" className={styles.contactSubmit}>
+                Send
+              </Button>
+            </Box>
+          </Grid>
         </Grid>
       </Grid>
       {openSucces ? <Success /> : null}

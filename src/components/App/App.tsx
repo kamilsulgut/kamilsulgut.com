@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import "./App.css";
 import Layout from "../../hoc/Layout";
 import AboutMe from "../AboutMe/AboutMe";
@@ -9,18 +9,16 @@ import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import Nav from "../Nav/Nav";
 
-function App() {
-  return (
-    <Layout>
-      <Nav />
-      <Header />
-      <AboutMe />
-      <Techstack />
-      <Portfolio />
-      <Contact />
-      <Footer />
-    </Layout>
-  );
-}
+const App: FC = () => (
+  <Layout>
+    <Nav />
+    <Header />
+    <AboutMe />
+    <Techstack />
+    <Portfolio />
+    <Contact />
+    <Footer />
+  </Layout>
+);
 
 export default App;

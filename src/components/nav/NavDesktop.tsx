@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, FC } from "react";
 import Typography from "@mui/material/Typography";
-import IconButton from "@mui/material/IconButton";
 import { menuItems } from "./routeList";
 import { useStyles } from "../../constants/styles";
 
-const NavDesktop = () => {
+const NavDesktop: FC = () => {
   const styles = useStyles();
 
   return (

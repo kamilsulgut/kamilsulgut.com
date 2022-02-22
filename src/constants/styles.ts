@@ -1,7 +1,6 @@
-import { ThemeProvider } from "@mui/material/styles";
 import bgcImg from "../img/space.jpg";
 import { makeStyles } from "@mui/styles";
-import { myHover, myDefaultText } from "./colors";
+import { myHover, myDefaultText, mySecondary } from "./colors";
 
 export const useStyles = makeStyles({
   Layout: {
@@ -9,9 +8,12 @@ export const useStyles = makeStyles({
     flexDirection: "column",
     backgroundImage: `url(${bgcImg})`,
     backgroundSize: "cover",
+    backgroundPosition: "center",
+    boxShadow: "100vw 100vh #18181878 inset !important",
     width: "100%",
     minHeight: "100vh",
     overflow: "hidden",
+    color: `${myDefaultText}`,
   },
   sectionTittle: {
     display: "flex",
@@ -32,22 +34,29 @@ export const useStyles = makeStyles({
     alignItems: "center",
     justifyContent: "center",
   },
-  navBarContainer: {
-    position: "sticky",
-    top: 0,
-    right: 0,
-  },
+
   appBar: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "flex-end",
-    color: "white",
-    position: "sticky",
-    marginLeft: 10,
+    color: `${myDefaultText}`,
+    backgroundColor: `${mySecondary}`,
+  },
+  appBarTransparent: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    color: `${myDefaultText}`,
+    backgroundColor: "transparent",
   },
   navDesktopTypography: {
+    marginLeft: 15,
     transition: "all 250ms ease-in-out",
-    marginLeft: 10,
+    "&:hover": {
+      marginLeft: 20,
+      marginRight: 20,
+      transform: "scale(1.1)",
+    },
   },
   navDesktopButton: {
     color: `${myDefaultText}`,
@@ -58,8 +67,11 @@ export const useStyles = makeStyles({
     "&:hover": {
       color: `${myHover}`,
       cursor: "pointer",
-      fontWeight: "bold",
+      transform: "scale(1.3)",
     },
+  },
+  abutMeText: {
+    fontSize: "1.5rem",
   },
   techBox: {
     flexDirection: "row",
@@ -78,24 +90,29 @@ export const useStyles = makeStyles({
     },
   },
   img: {
-    borderRadrius: 5,
+    borderRadrius: "25%",
+    margin: 3,
+    width: "100%",
   },
-  imgItem: {
-    marginTop: 3,
-    marginBottom: 3,
-    minWidth: 440,
-    minHght: 650,
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    backroundSize: "cover",
-    borderRadius: 3,
+  itemLinks: {
+    textDecoration: "none",
+    color: `${mySecondary}`,
+    transition: "all 300ms ease-in-out",
+    "&:hover": {
+      color: `${myHover}`,
+    },
   },
+
   contactForm: {
     marginBottom: 30,
   },
   contactInput: {
     marginBottom: 20,
-    backgroundColor: "white",
+    backgroundColor: `${mySecondary}`,
+    borderRadius: 10,
+  },
+  contactSubmit: {
+    color: "blue",
   },
   dialogSuccessTitle: {
     fontSize: "3rem",
@@ -126,5 +143,11 @@ export const useStyles = makeStyles({
     color: "white",
     fontSize: "1.3rem",
     marginLeft: 20,
+    transition: "all 250ms ease-in-out",
+    "&:hover": {
+      color: `${myHover}`,
+      cursor: "pointer",
+      transform: "scale(1.1)",
+    },
   },
 });

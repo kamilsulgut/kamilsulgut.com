@@ -42,17 +42,14 @@ const NavMobile: FC = () => {
         onClose={handleClose}
         sx={{
           backgroundColor: "transparent",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "cemter",
         }}
       >
         {menuItems.map((el: { item: string; route: string }, i: number) => {
           return (
-            <MenuItem
-              sx={{
-                color: `${myDefaultText}`,
-              }}
-              key={i}
-              onClick={handleClose}
-            >
+            <MenuItem key={i} onClick={handleClose}>
               <a href={el.route} className={styles.navDesktopButton}>
                 {el.item.toUpperCase()}
               </a>

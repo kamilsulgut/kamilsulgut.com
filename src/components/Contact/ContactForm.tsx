@@ -6,16 +6,9 @@ import { Box, Button, Grid, TextField } from "@mui/material";
 import Success from "./Success";
 import Failed from "./Failed";
 
-interface IFormInput {
-  fullName: string;
-  company: string;
-  email: string;
-  message: string;
-}
-
 interface Template {
-  from_name: string;
-  to_name: string;
+  from_name?: string;
+  to_name?: string;
   fullName: string;
   company: string;
   email: string;
@@ -32,26 +25,27 @@ const ContactForm: FC = () => {
     handleSubmit,
     reset,
     formState: { isSubmitSuccessful },
-  } = useForm<IFormInput>({
+  } = useForm<Template>({
     defaultValues: {
       fullName: "",
       company: "",
       email: "",
-      message: "",
+      msg: "",
     },
   });
-  const onSubmit: SubmitHandler<IFormInput> = (data) => {
-    let serviceId: any = process.env.REACT_APP_SERVICE_ID;
-    let templateId: any = process.env.REACT_APP_TEMPLATE_ID;
-    let userID: any = process.env.REACT_APP_USER_ID;
+  const onSubmit: SubmitHandler<Template> = (data) => {
+    let serviceId: string = process.env.REACT_APP_SERVICE_ID as string;
+    let templateId: string = process.env.REACT_APP_TEMPLATE_ID as string;
+    let userID: string = process.env.REACT_APP_USER_ID as string;
+    let toEmail: string = process.env.REACT_APP_TO_EMAIL as string;
 
     let templateParams: any = {
       from_name: "Contact Mailer",
-      to_name: `${process.env.REACT_APP_TO_EMAIL}`,
+      to_name: `${toEmail}`,
       fullName: `${data.fullName}`,
       company: `${data.company}`,
       email: `${data.email}`,
-      msg: `${data.message}`,
+      msg: `${data.msg}`,
     };
 
     emailjs
@@ -76,7 +70,7 @@ const ContactForm: FC = () => {
         fullName: "",
         company: "",
         email: "",
-        message: "",
+        msg: "",
       });
     }
   }, [isSubmitSuccessful, reset]);
@@ -150,7 +144,7 @@ const ContactForm: FC = () => {
           </Grid>
           <Grid item>
             <Controller
-              name="message"
+              name="msg"
               control={control}
               render={({ field }) => (
                 <TextField

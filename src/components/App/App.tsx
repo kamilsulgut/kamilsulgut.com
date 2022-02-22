@@ -7,11 +7,11 @@ import Portfolio from "../Portfolio/Portfolio";
 import Contact from "../Contact/Contact";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
-import Nav from "../Nav/Nav";
+import NavBar from "../NavBar/NavBar";
 
 const App: FC = () => (
   <Layout>
-    <Nav />
+    <NavBar />
     <Header />
     <AboutMe />
     <Techstack />

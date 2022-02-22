@@ -17,6 +17,7 @@ const Footer: FC = () => {
         <a
           href="https://www.linkedin.com/in/kamilsulgut/"
           target="_blank"
+          rel="noreferrer"
           className={styles.footerLinks}
         >
           <BsLinkedin />
@@ -24,6 +25,7 @@ const Footer: FC = () => {
         <a
           href="https://github.com/kamilsulgut"
           target="_blank"
+          rel="noreferrer"
           className={styles.footerLinks}
         >
           <BsGithub />
@@ -31,6 +33,7 @@ const Footer: FC = () => {
         <a
           href="https://www.instagram.com/kamil.s94/"
           target="_blank"
+          rel="noreferrer"
           className={styles.footerLinks}
         >
           <BsInstagram />

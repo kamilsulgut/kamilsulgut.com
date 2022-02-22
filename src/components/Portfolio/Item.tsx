@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React from "react";
 import { Paper, Button } from "@mui/material";
 import { useStyles } from "../../constants/styles";
 
@@ -18,6 +18,7 @@ const Item = (props: any) => {
         <a
           href="https://github.com/kamilsulgut"
           target="_blank"
+          rel="noreferrer"
           className={styles.itemLinks}
         >
           Check it out!

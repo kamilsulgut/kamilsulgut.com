@@ -1,55 +1,34 @@
-import React from "react";
+import React, { FC } from "react";
+import NavDesktop from "./NavDesktop";
+import NavMobile from "./NavMobile";
 import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
 
-const Nav = () => {
-  const menuItems: string[] = [
-    "Home",
-    "AboutMe",
-    "Techstack",
-    "Portfolio",
-    "Contact",
-  ];
+import Toolbar from "@mui/material/Toolbar";
+
+import Hidden from "@mui/material/Hidden";
+import { useStyles } from "../../constants/styles";
+import { Container } from "@mui/material";
+import HideOnScroll from "./HideOnScroll";
+
+const Nav: FC = () => {
+  const styles = useStyles();
+
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar
-        sx={{
-          display: "flex",
-          justifyContent: "flex-end",
-          backgroundColor: "inherit",
-          color: "black",
-        }}
-        position="sticky"
-      >
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
-          {menuItems.map((el: string, i: number) => {
-            return (
-              <Typography
-                key={i}
-                variant="h6"
-                component="div"
-                sx={{ marginRight: 5 }}
-              >
-                {el.toUpperCase()}
-              </Typography>
-            );
-          })}
-        </Toolbar>
+    <HideOnScroll>
+      <AppBar elevation={3} position="fixed" color="secondary">
+        <Container maxWidth="xl">
+          <Toolbar className={styles.appBar}>
+            <Hidden mdDown>
+              <NavDesktop />
+            </Hidden>
+
+            <Hidden mdUp>
+              <NavMobile />
+            </Hidden>
+          </Toolbar>
+        </Container>
       </AppBar>
-    </Box>
+    </HideOnScroll>
   );
 };
 

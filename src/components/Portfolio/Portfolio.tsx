@@ -1,6 +1,5 @@
 import { Box } from "@mui/material";
 import React, { FC } from "react";
-import { useStyles } from "../../constants/styles";
 import Title from "../../constants/Title";
 import Carousel from "react-material-ui-carousel";
 import Item from "./Item";
@@ -9,7 +8,6 @@ import codingImg from "../../img/coding-3_1280.jpg";
 import codeImg from "../../img/code-1_1280.jpg";
 
 const Portfolio: FC = () => {
-  const styles = useStyles();
   const items = [
     {
       name: "Random Name #1",

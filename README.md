@@ -1,6 +1,6 @@
 # Welcome!
 
-    Hello, this is the design of my website. You can see the live [here](http://kamilsulgut.com).
+Hello, this is the design of my website. You can see the live [here](http://kamilsulgut.com).
 
 ## Techstack
 

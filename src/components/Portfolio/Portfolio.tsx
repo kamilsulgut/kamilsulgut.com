@@ -13,17 +13,17 @@ const Portfolio: FC = () => {
   const items = [
     {
       name: "Random Name #1",
-      description: "Probably the most random thing you have ever seen!",
+      description: "Projects will be added soon",
       img: `${dektopImg}`,
     },
     {
       name: "Random Name #2",
-      description: "Hello World!",
+      description: "Projects will be added soon",
       img: `${codingImg}`,
     },
     {
       name: "Random Name #3",
-      description: "Hello World!",
+      description: "Projects will be added soon",
       img: `${codeImg}`,
     },
   ];

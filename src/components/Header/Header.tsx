@@ -9,7 +9,7 @@ const Header: FC = () => {
   const styles = useStyles();
   return (
     <>
-      <Box id="header" className={styles.headerContainer}>
+      <Box id="back-to-top-anchor" className={styles.headerContainer}>
         <Container>
           <Text />
         </Container>

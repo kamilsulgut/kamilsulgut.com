@@ -10,17 +10,15 @@ import Header from "../Header/Header";
 import Nav from "../Nav/Nav";
 
 const App: FC = () => (
-  <>
-    <Layout>
-      <Nav />
-      <Header />
-      <AboutMe />
-      <Techstack />
-      <Portfolio />
-      <Contact />
-      <Footer />
-    </Layout>
-  </>
+  <Layout>
+    <Nav />
+    <Header />
+    <AboutMe />
+    <Techstack />
+    <Portfolio />
+    <Contact />
+    <Footer />
+  </Layout>
 );
 
 export default App;

@@ -4,7 +4,7 @@ import { menuItems } from "./routeList";
 import MenuIcon from "@mui/icons-material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Drawer from "@mui/material/Drawer";
-import { myHover, myDefaultText, hamburgerColor } from "../../constants/colors";
+import { myHover, myDefaultText } from "../../constants/colors";
 import { useStyles } from "../../constants/styles";
 
 const NavMobile: FC = () => {
@@ -29,7 +29,7 @@ const NavMobile: FC = () => {
         aria-haspopup="true"
         onClick={handleMenu}
         sx={{
-          color: `${hamburgerColor}`,
+          color: `${myHover}`,
         }}
       >
         <MenuIcon />

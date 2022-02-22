@@ -1,7 +1,9 @@
 import React, { FC } from "react";
 import { Paper, Button } from "@mui/material";
+import { useStyles } from "../../constants/styles";
 
 const Item = (props: any) => {
+  const styles = useStyles();
   return (
     <Paper
       sx={{
@@ -13,7 +15,13 @@ const Item = (props: any) => {
       <h2>{props.item.name}</h2>
       <p>{props.item.description}</p>
       <Button className="CheckButton" color="secondary">
-        Check it out!
+        <a
+          href="https://github.com/kamilsulgut"
+          target="_blank"
+          className={styles.itemLinks}
+        >
+          Check it out!
+        </a>
       </Button>
     </Paper>
   );

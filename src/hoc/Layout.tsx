@@ -31,6 +31,13 @@ const Layout: FC = React.memo((props) => {
           },
         },
       },
+      MuiInputBase: {
+        styleOverrides: {
+          root: {
+            color: `${myHover}`,
+          },
+        },
+      },
     },
   });
 

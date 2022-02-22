@@ -96,13 +96,21 @@ export const useStyles = makeStyles({
     maxWidth: 465,
     maxHeight: 650,
   },
+  itemLinks: {
+    textDecoration: "none",
+    color: `${mySecondary}`,
+    transition: "all 300ms ease-in-out",
+    "&:hover": {
+      color: `${myHover}`,
+    },
+  },
 
   contactForm: {
     marginBottom: 30,
   },
   contactInput: {
     marginBottom: 20,
-    backgroundColor: "white",
+    backgroundColor: `${mySecondary}`,
     borderRadius: 10,
   },
   contactSubmit: {

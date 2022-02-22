@@ -4,6 +4,9 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 .css-1nvnyqx-MuiPaper-root-MuiDrawer-paper {
   display: flex;
   justify-content: center;

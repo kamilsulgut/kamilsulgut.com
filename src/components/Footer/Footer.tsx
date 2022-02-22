@@ -1,7 +1,6 @@
 import React, { FC } from "react";
 import { Box, Typography } from "@mui/material";
-import { BsLinkedin, BsInstagram, BsBoxArrowDown } from "react-icons/bs";
-import { AiFillFacebook } from "react-icons/ai";
+import { BsLinkedin, BsInstagram, BsGithub } from "react-icons/bs";
 import { useStyles } from "../../constants/styles";
 
 const Footer: FC = () => {
@@ -21,18 +20,18 @@ const Footer: FC = () => {
           <BsLinkedin />
         </a>
         <a
+          href="https://github.com/kamilsulgut"
+          target="_blank"
+          className={styles.footerLinks}
+        >
+          <BsGithub />
+        </a>
+        <a
           href="https://www.instagram.com/kamil.s94/"
           target="_blank"
           className={styles.footerLinks}
         >
           <BsInstagram />
-        </a>
-        <a
-          href="https://www.facebook.com/kamilsulgut"
-          target="_blank"
-          className={styles.footerLinks}
-        >
-          <AiFillFacebook />
         </a>
       </Box>
     </Box>

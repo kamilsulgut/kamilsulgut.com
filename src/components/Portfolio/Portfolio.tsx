@@ -4,6 +4,9 @@ import { useStyles } from "../../constants/styles";
 import Title from "../../constants/Title";
 import Carousel from "react-material-ui-carousel";
 import Item from "./Item";
+import dektopImg from "../../img/desktop-1245714_1280.jpg";
+import codingImg from "../../img/coding-3_1280.jpg";
+import codeImg from "../../img/code-1_1280.jpg";
 
 const Portfolio: FC = () => {
   const styles = useStyles();
@@ -11,26 +14,17 @@ const Portfolio: FC = () => {
     {
       name: "Random Name #1",
       description: "Probably the most random thing you have ever seen!",
+      img: `${dektopImg}`,
     },
     {
       name: "Random Name #2",
       description: "Hello World!",
+      img: `${codingImg}`,
     },
     {
       name: "Random Name #3",
       description: "Hello World!",
-    },
-    {
-      name: "Random Name #4",
-      description: "Hello World!",
-    },
-    {
-      name: "Random Name #5",
-      description: "Hello World!",
-    },
-    {
-      name: "Random Name #6",
-      description: "Hello World!",
+      img: `${codeImg}`,
     },
   ];
   return (

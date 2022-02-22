@@ -9,20 +9,18 @@ import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import Nav from "../Nav/Nav";
 
-const App: FC = () => {
-  return (
-    <>
-      <Layout>
-        <Nav />
-        <Header />
-        <AboutMe />
-        <Techstack />
-        <Portfolio />
-        <Contact />
-        <Footer />
-      </Layout>
-    </>
-  );
-};
+const App: FC = () => (
+  <>
+    <Layout>
+      <Nav />
+      <Header />
+      <AboutMe />
+      <Techstack />
+      <Portfolio />
+      <Contact />
+      <Footer />
+    </Layout>
+  </>
+);
 
 export default App;

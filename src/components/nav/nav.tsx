@@ -15,7 +15,7 @@ const Nav: FC = () => {
 
   return (
     <HideOnScroll>
-      <AppBar elevation={0} position="fixed" color="secondary">
+      <AppBar elevation={3} position="fixed" color="secondary">
         <Container maxWidth="xl">
           <Toolbar className={styles.appBar}>
             <Hidden mdDown>

@@ -1,7 +1,9 @@
 import React, { FC } from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Fab } from "@mui/material";
 import { BsLinkedin, BsInstagram, BsGithub } from "react-icons/bs";
 import { useStyles } from "../../constants/styles";
+import ScrollTop from "../ScrollTop/ScrollTop";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
 const Footer: FC = () => {
   const styles = useStyles();
@@ -34,6 +36,11 @@ const Footer: FC = () => {
           <BsInstagram />
         </a>
       </Box>
+      <ScrollTop>
+        <Fab color="primary" size="small" aria-label="back to top">
+          <KeyboardArrowUpIcon />
+        </Fab>
+      </ScrollTop>
     </Box>
   );
 };

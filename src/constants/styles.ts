@@ -1,6 +1,6 @@
 import bgcImg from "../img/space.jpg";
 import { makeStyles } from "@mui/styles";
-import { myHover, myDefaultText } from "./colors";
+import { myHover, myDefaultText, mySecondary } from "./colors";
 
 export const useStyles = makeStyles({
   Layout: {
@@ -40,6 +40,14 @@ export const useStyles = makeStyles({
     flexDirection: "row",
     justifyContent: "flex-end",
     color: `${myDefaultText}`,
+    backgroundColor: `${mySecondary}`,
+  },
+  appBarTransparent: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    color: `${myDefaultText}`,
+    backgroundColor: "transparent",
   },
   navDesktopTypography: {
     marginLeft: 15,

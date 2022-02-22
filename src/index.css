@@ -7,18 +7,3 @@ body {
 html {
   scroll-behavior: smooth;
 }
-.css-1nvnyqx-MuiPaper-root-MuiDrawer-paper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1rem;
-  background-color: transparent !important;
-  box-shadow: none !important;
-}
-
-.css-oqbj7d {
-  background-color: transparent !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-}

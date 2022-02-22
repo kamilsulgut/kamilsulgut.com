@@ -1,6 +1,4 @@
-
-import React, { FC } from "react
-
+import React, { FC } from "react";
 import Typography from "@mui/material/Typography";
 import { menuItems } from "./routeList";
 import { useStyles } from "../../constants/styles";

@@ -1,4 +1,4 @@
-import { Box, Typography, Button } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React, { FC } from "react";
 import { myDefaultText } from "../../constants/colors";
 

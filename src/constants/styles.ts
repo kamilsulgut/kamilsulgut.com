@@ -91,10 +91,8 @@ export const useStyles = makeStyles({
   },
   img: {
     borderRadrius: "25%",
-    marginTop: 3,
-    marginBottom: 3,
-    maxWidth: 465,
-    maxHeight: 650,
+    margin: 3,
+    width: "100%",
   },
   itemLinks: {
     textDecoration: "none",

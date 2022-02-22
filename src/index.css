@@ -15,3 +15,10 @@ html {
   background-color: transparent !important;
   box-shadow: none !important;
 }
+
+.css-oqbj7d {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -40,12 +40,6 @@ const NavMobile: FC = () => {
         keepMounted
         open={Boolean(anchorEl)}
         onClose={handleClose}
-        sx={{
-          backgroundColor: "transparent",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "cemter",
-        }}
       >
         {menuItems.map((el: { item: string; route: string }, i: number) => {
           return (

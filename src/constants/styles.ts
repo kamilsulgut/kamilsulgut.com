@@ -64,6 +64,8 @@ export const useStyles = makeStyles({
     textDecoration: "none",
     marginLeft: 8,
     transition: "all 250ms ease-in-out",
+    backgroundColor: "transparent",
+    boxShadow: "none",
     "&:hover": {
       color: `${myHover}`,
       cursor: "pointer",

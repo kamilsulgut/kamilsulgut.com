@@ -37,6 +37,7 @@ const NavMobile: FC = () => {
       <Drawer
         id="menu-appbar"
         anchor="top"
+        color="transparent"
         keepMounted
         open={Boolean(anchorEl)}
         onClose={handleClose}

@@ -4,8 +4,9 @@ import { menuItems } from "./routeList";
 import MenuIcon from "@mui/icons-material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Drawer from "@mui/material/Drawer";
-import { myHover, myDefaultText } from "../../constants/colors";
+import { myHover } from "../../constants/colors";
 import { useStyles } from "../../constants/styles";
+import { Box } from "@mui/material";
 
 const NavMobile: FC = () => {
   const styles = useStyles();
@@ -21,7 +22,7 @@ const NavMobile: FC = () => {
   };
 
   return (
-    <>
+    <Box>
       <IconButton
         size="large"
         aria-label="account of current user"
@@ -52,7 +53,7 @@ const NavMobile: FC = () => {
           );
         })}
       </Drawer>
-    </>
+    </Box>
   );
 };
 
